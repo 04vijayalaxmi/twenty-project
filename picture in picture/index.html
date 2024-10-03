@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>picture-in-picture</h1>
+    <ul class="Summary summary--with-divider">
+        <li>Allows video elements to popout" into a separate window for playback</li>
+    </ul>
+
+    <video id="myvideo" controls>
+        <source src="video/videoplayback.mp4" type="video/mp4">
+    </video>
+    <div style="float:right">
+        <button id="btnPip" style="display:none", type="button" class="button">Enter picture-in-picture</button>
+    </div>
+
+    <script>
+        const myvideo=document.querySelector("#myvideo");
+        const btnPip=document.querySelector("#btnPip");
+
+        if("pictureInPctureEnabled"in document){
+            btnPip.style.display=null;
+        }
+    </script>
+</body>
+</html>
